@@ -39,10 +39,9 @@ h2{font-size:clamp(26px,4vw,40px);font-weight:800;margin-bottom:22px}
 .slot b{font-variant-numeric:tabular-nums;white-space:nowrap;min-width:48px}
 .break{background:var(--deep);color:#fff;border-radius:18px;padding:12px 18px;display:flex;justify-content:space-between;gap:12px;margin-top:16px;flex-wrap:wrap;font-size:14px}
 .small{color:var(--mut);font-size:13px;margin:12px 0 0}
-.spk{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-.sp{text-decoration:none;color:inherit;background:var(--card);border-radius:22px;padding:20px 14px 20px;text-align:center;align-items:center;display:flex;flex-direction:column;gap:2px}
-.av{width:150px;height:150px;flex-shrink:0;border-radius:50%;background:var(--amber);display:grid;place-items:center;font-weight:800;font-size:44px;margin:4px auto 12px;object-fit:cover;object-position:center 20%;box-shadow:0 0 0 5px var(--mint)}
-.sp:nth-child(3n) .av{background:var(--mint)}
+.spk{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.sp{flex:0 0 calc((100% - 42px)/4);text-decoration:none;color:inherit;background:var(--card);border-radius:22px;padding:20px 14px 20px;text-align:center;align-items:center;display:flex;flex-direction:column;gap:2px}
+.av{width:150px;height:150px;flex-shrink:0;border-radius:50%;background:var(--amber);display:grid;place-items:center;font-weight:800;font-size:44px;margin:4px auto 12px;object-fit:cover;object-position:center 20%;box-shadow:0 0 0 6px var(--rc,var(--mint))}
 .sp b{font-family:"Bricolage Grotesque",sans-serif;font-size:17px}
 .sp span{color:var(--mut);font-size:13px}
 .feat{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -57,3 +56,11 @@ footer{background:var(--deep);color:#e8f3ef;padding-block:36px;font-size:14px}
 @media (max-width:760px){.two,.themes,.feat{grid-template-columns:1fr}.nav .wrap>div{display:none}}
 @media (prefers-reduced-motion:reduce){.blob{animation:none}html{scroll-behavior:auto}}
 .sp[href]:hover{transform:translateY(-2px)}
+.t1{--tc:#cfe8df;--rc:#8cc9b6}
+.t2{--tc:#f8e3b8;--rc:var(--amber)}
+.t3{--tc:var(--deep);--rc:var(--deep)}
+.theme{background:var(--tc)}
+.theme.t3{color:#fff}
+.theme.t3 .slot{border-color:#fff4}
+@media(max-width:900px){.sp{flex-basis:calc((100% - 14px)/2)}}
+@media(max-width:480px){.sp{flex-basis:100%}}
